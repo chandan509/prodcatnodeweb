@@ -7,3 +7,8 @@ it('renders without crashing', () => {
   ReactDOM.render(<MainComponent />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+let data = [];
+data.push({PERSON : "Bob Jones"});
+data.push({PLACE : "Washington"});
+let jsonString = JSON.stringify(data);
