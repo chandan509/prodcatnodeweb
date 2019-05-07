@@ -6,7 +6,7 @@ class MainComponent extends Component {
     constructor(props){
         super(props);
         this.state = {
-            date: undefined
+            data: undefined
         }
         this.inputData = React.createRef();
         this.processData = this.processData.bind(this)
@@ -17,13 +17,14 @@ class MainComponent extends Component {
         //data = JSON.stringify(data);
         try{
             data = JSON.parse(data);
+
         }
         catch(e){
             console.log("Invalid JSON format");
             this.setState({error: "Invalid JSON format"}); 
             return;           
         }
-        this.setState({data});
+        this.setState({data, error:undefined});
     }
     render() {
 
